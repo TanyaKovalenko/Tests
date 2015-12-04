@@ -57,7 +57,6 @@ do
 			let "item_in_input_array = item_in_input_array % 3"
 			if [[ $item_in_input_array -eq 0 ]]
 			then
-				echo "Item = "
 				let "index_of_array = index_of_array + 1"
 				comparison_array[index_of_array]=1
 				let "index_of_array = index_of_array + 1"
@@ -69,8 +68,6 @@ do
 	fi
 	let "index_of_array = index_of_array + 1"
 done
-echo "${input_array[@]}"
-echo "${output_array[@]}"
 if [[ $last_item -eq 2 ]]
 	then
 		comparison_string=${comparison_array[@]}
