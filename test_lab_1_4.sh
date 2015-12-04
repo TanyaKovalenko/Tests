@@ -30,5 +30,4 @@ then
 	echo "Error: Output array is not sorted."
 	exit 1
 fi
-done
 echo "Program works correctly."
