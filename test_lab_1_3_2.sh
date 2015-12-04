@@ -16,7 +16,7 @@ input_array[$MAX_NUM_OF_EL_IN_ARRAY]=2
 let "MAX_NUM_OF_EL_IN_ARRAY = MAX_NUM_OF_EL_IN_ARRAY + 1"
 input_array[$MAX_NUM_OF_EL_IN_ARRAY]=0
 
-cd ~/Documents/Labs/seminar-materials/c++/task-implementation/src
+#cd ~/Documents/Labs/seminar-materials/c++/task-implementation/src
 
 TEMP_FILE_WITH_OUTPUT_STRINGS=`mktemp outXXXXXXXXX`
 declare -a output_array_of_strings

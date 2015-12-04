@@ -3,7 +3,7 @@ cleanup() {
   rm -f "$TEMP_FILE_WITH_OUTPUT_STRINGS" "$TEMP_FILE_WITH_SORTED_ARRAY" "$TEMP_FILE_WITH_OUTPUT_ARRAY"
 }
 trap cleanup EXIT
-cd ~/Documents/Labs/seminar-materials/c++/task-implementation/src
+#cd ~/Documents/Labs/seminar-materials/c++/task-implementation/src
 RANGE=20
 MAX_NUM_OF_EL_IN_ARRAY=$RANDOM
 let "MAX_NUM_OF_EL_IN_ARRAY %= $RANGE"
