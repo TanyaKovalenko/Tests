@@ -1,6 +1,6 @@
 #!/bin/bash
 cleanup() {
-  rm -f #"$TEMP_FILE_WITH_OUTPUT_STRING" "$TEMP_FILE_INPUT"
+  rm -f "$TEMP_FILE_WITH_OUTPUT_STRING" "$TEMP_FILE_INPUT"
 }
 trap cleanup EXIT
 echo "Run test for lab 1.2 ... "
@@ -15,15 +15,15 @@ do
 done
 
 TEMP_FILE_INPUT=$WORKSPACE/input_file
-touch $TEMP_FILE_INPUT
-echo "${input_array[@]}" > $TEMP_FILE_INPUT
-TEMP_FILE_WITH_OUTPUT_STRING=`mktemp outXXXXXXXXX`
+touch "$TEMP_FILE_INPUT"
+echo "${input_array[@]}" > "$TEMP_FILE_INPUT"
+TEMP_FILE_WITH_OUTPUT_STRING="`mktemp outXXXXXXXXX`"
 
 declare -a output_array_of_strings
 index_of_string_in_array=0
-echo `make run-1 ARGS="2 $TEMP_FILE_INPUT` > $TEMP_FILE_WITH_OUTPUT_STRING 
+make run-1 ARGS="2 $TEMP_FILE_INPUT" > "$TEMP_FILE_WITH_OUTPUT_STRING"
 
-DIFF=$(diff $TEMP_FILE_WITH_OUTPUT_STRING $TEMP_FILE_INPUT) 
+DIFF="$(diff "$TEMP_FILE_WITH_OUTPUT_STRING" "$TEMP_FILE_INPUT")"
 	if [ $? -ne 0 ]
 	then
 		echo "Error. The array from input file does not correspond to the output array."
