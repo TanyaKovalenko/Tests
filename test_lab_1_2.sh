@@ -3,8 +3,7 @@ cleanup() {
   rm -f #"$TEMP_FILE_WITH_OUTPUT_STRING" "$TEMP_FILE_INPUT"
 }
 trap cleanup EXIT
-
-#cd ~/Documents/Labs/seminar-materials/c++/task-implementation/src
+echo "Run test for lab 1.2 ... "
 RANGE=20
 MAX_NUM_OF_EL_IN_ARRAY=$RANDOM
 let "MAX_NUM_OF_EL_IN_ARRAY %= $RANGE"
@@ -27,6 +26,7 @@ echo `make run-1 ARGS="2 $TEMP_FILE_INPUT` > $TEMP_FILE_WITH_OUTPUT_STRING
 DIFF=$(diff $TEMP_FILE_WITH_OUTPUT_STRING $TEMP_FILE_INPUT) 
 	if [ $? -ne 0 ]
 	then
-		echo "Error"
+		echo "Error. The array from input file does not correspond to the output array."
 		exit 1
 	fi
+echo "Program works correctly."

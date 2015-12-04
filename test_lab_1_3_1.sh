@@ -3,6 +3,8 @@ cleanup() {
   rm -f "$TEMP_FILE_WITH_OUTPUT_STRINGS"
 }
 trap cleanup EXIT
+echo "Run test for lab 1.3 ... "
+echo "Test case in which input array ends with 0 after 1"
 RANGE=20
 MAX_NUM_OF_EL_IN_ARRAY=$RANDOM
 let "MAX_NUM_OF_EL_IN_ARRAY %= $RANGE"
@@ -15,9 +17,6 @@ done
 input_array[$MAX_NUM_OF_EL_IN_ARRAY]=1
 let "MAX_NUM_OF_EL_IN_ARRAY = MAX_NUM_OF_EL_IN_ARRAY + 1"
 input_array[$MAX_NUM_OF_EL_IN_ARRAY]=0
-
-#cd ~/Documents/Labs/seminar-materials/c++/task-implementation/src
-
 TEMP_FILE_WITH_OUTPUT_STRINGS=`mktemp outXXXXXXXXX`
 declare -a output_array_of_strings
 index_of_string_in_array=0
@@ -80,7 +79,7 @@ if [[ "$comparison_string" = "$output_string" ]]
 	then
 		echo "Program works correctly"
 	else
-		echo "Error."
+		echo "There is a error somewhere in your code."
 		exit 1
 fi
 

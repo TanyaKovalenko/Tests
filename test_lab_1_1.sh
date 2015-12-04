@@ -3,7 +3,7 @@ cleanup() {
   rm -f "$TEMP_FILE_WITH_OUTPUT_STRINGS" "$TEMP_FILE_WITH_SORTED_ARRAY" "$TEMP_FILE_WITH_OUTPUT_ARRAY"
 }
 trap cleanup EXIT
-#cd ~/Documents/Labs/seminar-materials/c++/task-implementation/src
+echo "Run test for lab 1.1 ... "
 RANGE=20
 MAX_NUM_OF_EL_IN_ARRAY=$RANDOM
 let "MAX_NUM_OF_EL_IN_ARRAY %= $RANGE"
@@ -35,11 +35,11 @@ do
 	DIFF=$(diff $TEMP_FILE_WITH_SORTED_ARRAY $TEMP_FILE_WITH_OUTPUT_ARRAY) 
 	if [ $? -ne 0 ]
 	then
-		echo "Error: Array is not sorted"
+		echo "Error: Output array is not sorted."
 		exit 1
 	fi   	
 	num_of_output_string=$[$num_of_output_string+1]
 done
-echo "Program works correctly"
+echo "Program works correctly."
 
 
