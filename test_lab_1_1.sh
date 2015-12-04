@@ -29,10 +29,10 @@ do
 	output_string="${output_array_of_strings[num_of_output_string]}"
 	output_array=($output_string)
 	declare -a sorted_input_array
-	sorted_input_array=(`echo "${input_array[@]}" | tr ' ' '\n' | sort -n | tr '\n' ' '`)		
+	sorted_input_array=$input_array #(`echo "${input_array[@]}" | tr ' ' '\n' | sort -n | tr '\n' ' '`)		
 	echo "${sorted_input_array[@]}" | tr ' ' '\n' > $TEMP_FILE_WITH_SORTED_ARRAY
 	echo "${output_array[@]}" | tr ' ' '\n' > $TEMP_FILE_WITH_OUTPUT_ARRAY
-	DIFF=$(diff $TEMP_FILE_WITH_SORTED_ARRAY $TEMP_FILE_WITH_OUTPUT_ARRAY) 
+	diff $TEMP_FILE_WITH_SORTED_ARRAY $TEMP_FILE_WITH_OUTPUT_ARRAY
 	if [ $? -ne 0 ]
 	then
 		echo "Error: Output array is not sorted."
