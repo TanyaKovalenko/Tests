@@ -8,3 +8,4 @@ cd c++/task-implementation/src
 "$WORKSPACE"/test_lab_1_3_2.sh
 "$WORKSPACE"/test_lab_1_3_3.sh
 "$WORKSPACE"/test_lab_1_3_4.sh
+"$WORKSPACE"/test_lab_1_4.sh
