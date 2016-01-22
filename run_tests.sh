@@ -10,4 +10,4 @@ cd c++/task-implementation/src
 "$WORKSPACE"/test_lab_1_3_4.sh
 "$WORKSPACE"/test_lab_1_4.sh
 cd out/1
-valgrind --tool=memcheck --xml=yes --xml-socket=10.64.74.162:12345 ./lab 4 ascending 3
+valgrind --tool=memcheck --xml=yes --xml-socket=10.64.74.162:80 ./lab 4 ascending 3
