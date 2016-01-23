@@ -10,6 +10,4 @@ cd c++/task-implementation/src
 "$WORKSPACE"/test_lab_1_3_4.sh
 "$WORKSPACE"/test_lab_1_4.sh
 cd out/1
-touch ~/Documents/Tests/res.xml
-touch ~/Documents/Tests/res.log
-valgrind --tool=memcheck --xml=yes --xml-file="~/Documents/Tests/res.xml" --log-file="~/Documents/Tests/res.log" ./lab 4 ascending 3
+valgrind --tool=memcheck --xml=yes --xml-file="res.xml" --log-file="res.log" ./lab 4 ascending 3
