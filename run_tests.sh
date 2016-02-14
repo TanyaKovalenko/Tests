@@ -9,5 +9,3 @@ cd c++/task-implementation/src
 "$WORKSPACE"/test_lab_1_3_3.sh
 "$WORKSPACE"/test_lab_1_3_4.sh
 "$WORKSPACE"/test_lab_1_4.sh
-cd out/1
-valgrind --tool=memcheck --xml=yes --xml-file="res.xml" ./lab 4 ascending 3
