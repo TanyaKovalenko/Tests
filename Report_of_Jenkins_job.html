@@ -1,47 +1,38 @@
-<!doctype html>
-<html>
-      <head>
-         <meta charset="utf-8"/>
-         <title> The report of the results of the lab testing </title>
-      </head>
-<body>
-      <table width="100%" border cellpadding="40" cellspacing="0" align="center" bgcolor="#00ee99">
-	  <caption>  Errors, detected by Valgrind: </caption>	 
-	  <tr>
-		  <td>
-		  </td>
-		  <td>
-		  Error 1
-		  </td>
-		  <td>
-		  Error 2
-		  </td>
-		  <td>
-		  Error 3
-		  </td>
-	  </tr>
-		<tr>
-		<td>
-			Lab 1.1
-		</td>
-		<td>			
-		</td>
-		<td>			
-		</td>
-		<td>			
-		</td>
-		</tr>
-		<tr>
-		<td>
-			Lab 1.2
-		</td>
-		<td>
-		</td>
-		<td>			
-		</td>
-		<td>			
-		</td>
-		</tr>
-	  </table>
-</body>
-</html>
+<br>
+
+<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
+
+<TR  BGCOLOR="#989898" width="100%"><td colspan=2><FONT COLOR=White FACE="Geneva, Arial" SIZE=2>  Summary</font></td></TR>
+
+<TR><TD BGCOLOR="#0099CC" width="20%"><FONT COLOR=White FACE="Geneva, Arial" SIZE=2>  Total</font></td><TD BGCOLOR="#FFFFFF"><FONT COLOR=#0099CC FACE="Geneva, Arial" SIZE=2>${TEST_COUNTS,var="total"}</font></td></TR>
+
+<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
+<TR><TD BGCOLOR="#04B431" width="20%"><FONT COLOR=white FACE="Geneva, Arial" SIZE=2>  Pass</font></td><TD BGCOLOR="#FFFFFF"><FONT COLOR=#04B431 FACE="Geneva, Arial" SIZE=2>${TEST_COUNTS,var="pass"}</font></td></TR>
+
+<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
+<TR><TD BGCOLOR="#DF3A01" width="20%"><FONT COLOR=white FACE="Geneva, Arial" SIZE=2>  Fail</font></td><TD BGCOLOR="#FFFFFF"><FONT COLOR=#DF3A01 FACE="Geneva, Arial" SIZE=2>${TEST_COUNTS,var="fail"}</font></td></TR>
+
+<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
+<TR><TD BGCOLOR="#A4A4A4" width="20%"><FONT COLOR=white FACE="Geneva, Arial" SIZE=2>  Skip</font></td><TD BGCOLOR="#FFFFFF"><FONT COLOR=#A4A4A4 FACE="Geneva, Arial" SIZE=2>${TEST_COUNTS,var="skip"}</font></td></TR>
+
+</TABLE>
+<br/>
+<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
+<TR  BGCOLOR="#989898" width="100%"><td><FONT COLOR=White FACE="Geneva, Arial" SIZE=2>  Failure Analysis</font></td></TR>
+<TR  BGCOLOR="#424242" width="100%"><td><FONT COLOR=White FACE="Courier New, Lucida Console" SIZE=2>${FAILED_TESTS, showStack=false}</font></td></TR>
+</TABLE>
+
+<br/>
+<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
+<TR  BGCOLOR="#989898" width="100%"><td><FONT COLOR=White FACE="Geneva, Arial" SIZE=2>HTML Report</font></td></TR>
+<TR  width="100%"><td><FONT FACE="Geneva, Arial" SIZE=2>${JOB_URL}ws/target/surefire-reports/index.html</font></td></TR>
+</TABLE>
+<br/>
+
+
+<br/>
+<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
+<TR  BGCOLOR="#989898" width="100%"><td><FONT COLOR=White FACE="Geneva, Arial" SIZE=2>Jenkins Job URL</font></td></TR>
+<TR  width="100%"><td><FONT FACE="Geneva, Arial" SIZE=2>${JOB_URL}</font></td></TR>
+</TABLE>
+</TABLE>
