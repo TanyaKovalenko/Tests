@@ -1,38 +1,96 @@
+$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+<br>
+Check console output at $BUILD_URL to view the results.
+<br>
 <br>
 
 <TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
 
-<TR  BGCOLOR="#989898" width="100%"><td colspan=2><FONT COLOR=White FACE="Geneva, Arial" SIZE=2>  Summary</font></td></TR>
+<TR  BGCOLOR="#989898" width="100%"><td colspan=2>
+	<td>
+		<FONT COLOR=White FACE="Geneva, Arial" SIZE=2> Summary</font>
+	</td>
+</TR>
 
-<TR><TD BGCOLOR="#0099CC" width="20%"><FONT COLOR=White FACE="Geneva, Arial" SIZE=2>  Total</font></td><TD BGCOLOR="#FFFFFF"><FONT COLOR=#0099CC FACE="Geneva, Arial" SIZE=2>${TEST_COUNTS,var="total"}</font></td></TR>
+<TR>
+	<TD BGCOLOR="#0099CC" width="20%">
+		<FONT COLOR=White FACE="Geneva, Arial" SIZE=2>  Total </font>
+	</td>
+	<TD BGCOLOR="#FFFFFF">
+		<FONT COLOR=#0099CC FACE="Geneva, Arial" SIZE=2>${TEST_COUNTS,var="total"}</font>
+	</td>
+</TR>
 
 <TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
-<TR><TD BGCOLOR="#04B431" width="20%"><FONT COLOR=white FACE="Geneva, Arial" SIZE=2>  Pass</font></td><TD BGCOLOR="#FFFFFF"><FONT COLOR=#04B431 FACE="Geneva, Arial" SIZE=2>${TEST_COUNTS,var="pass"}</font></td></TR>
+<TR>
+	<TD BGCOLOR="#04B431" width="20%">
+		<FONT COLOR=white FACE="Geneva, Arial" SIZE=2>  Pass </font>
+	</TD>
+	<TD BGCOLOR="#FFFFFF">
+		<FONT COLOR=#04B431 FACE="Geneva, Arial" SIZE=2> ${TEST_COUNTS,var="pass"} </font>
+	</TD>
+</TR>
 
 <TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
-<TR><TD BGCOLOR="#DF3A01" width="20%"><FONT COLOR=white FACE="Geneva, Arial" SIZE=2>  Fail</font></td><TD BGCOLOR="#FFFFFF"><FONT COLOR=#DF3A01 FACE="Geneva, Arial" SIZE=2>${TEST_COUNTS,var="fail"}</font></td></TR>
+<TR>
+	<TD BGCOLOR="#DF3A01" width="20%">
+		<FONT COLOR=white FACE="Geneva, Arial" SIZE=2>  Fail  </font>
+	</TD>
+	<TD BGCOLOR="#FFFFFF">
+		<FONT COLOR=#DF3A01 FACE="Geneva, Arial" SIZE=2> ${TEST_COUNTS,var="fail"} </font> 
+	</TD>
+</TR>
 
 <TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
-<TR><TD BGCOLOR="#A4A4A4" width="20%"><FONT COLOR=white FACE="Geneva, Arial" SIZE=2>  Skip</font></td><TD BGCOLOR="#FFFFFF"><FONT COLOR=#A4A4A4 FACE="Geneva, Arial" SIZE=2>${TEST_COUNTS,var="skip"}</font></td></TR>
+<TR>
+	<TD BGCOLOR="#A4A4A4" width="20%">
+		<FONT COLOR=white FACE="Geneva, Arial" SIZE=2>  Skip</font>
+	</TD>
+	<TD BGCOLOR="#FFFFFF">
+		<FONT COLOR=#A4A4A4 FACE="Geneva, Arial" SIZE=2> ${TEST_COUNTS,var="skip"} </font>
+	</TD>
+</TR>
 
 </TABLE>
-<br/>
+<br>
 <TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
-<TR  BGCOLOR="#989898" width="100%"><td><FONT COLOR=White FACE="Geneva, Arial" SIZE=2>  Failure Analysis</font></td></TR>
-<TR  BGCOLOR="#424242" width="100%"><td><FONT COLOR=White FACE="Courier New, Lucida Console" SIZE=2>${FAILED_TESTS, showStack=false}</font></td></TR>
+<TR  BGCOLOR="#989898" width="100%">
+	<td>
+		<FONT COLOR=White FACE="Geneva, Arial" SIZE=2>  Failure Analysis</font>
+	</td>
+</TR>
+<TR  BGCOLOR="#424242" width="100%">
+	<TD>
+		<FONT COLOR=White FACE="Courier New, Lucida Console" SIZE=2> ${FAILED_TESTS, showStack=false} </FONT>
+	</TD>
+</TR>
 </TABLE>
 
-<br/>
+<br>
+	<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
+		<TR  BGCOLOR="#989898" width="100%">
+			<TD>
+				<FONT COLOR=White FACE="Geneva, Arial" SIZE=2> HTML Report </FONT>
+			</TD>
+		</TR>
+		<TR  width="100%">
+			<TD>
+				<FONT FACE="Geneva, Arial" SIZE=2>${JOB_URL}ws/target/surefire-reports/index.html</FONT>
+			</TD>
+		</TR>
+	</TABLE>
+<br>
+<br>
 <TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
-<TR  BGCOLOR="#989898" width="100%"><td><FONT COLOR=White FACE="Geneva, Arial" SIZE=2>HTML Report</font></td></TR>
-<TR  width="100%"><td><FONT FACE="Geneva, Arial" SIZE=2>${JOB_URL}ws/target/surefire-reports/index.html</font></td></TR>
-</TABLE>
-<br/>
-
-
-<br/>
-<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
-<TR  BGCOLOR="#989898" width="100%"><td><FONT COLOR=White FACE="Geneva, Arial" SIZE=2>Jenkins Job URL</font></td></TR>
-<TR  width="100%"><td><FONT FACE="Geneva, Arial" SIZE=2>${JOB_URL}</font></td></TR>
+	<TR  BGCOLOR="#989898" width="100%">
+		<TD>
+			<FONT COLOR=White FACE="Geneva, Arial" SIZE=2>Jenkins Job URL</FONT>
+		</TD>
+	</TR>
+	<TR  width="100%">
+		<TD>
+			<FONT FACE="Geneva, Arial" SIZE=2>${JOB_URL}</FONT>
+		</TD>
+	</TR>
 </TABLE>
 </TABLE>
