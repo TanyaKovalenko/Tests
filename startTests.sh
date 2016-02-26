@@ -1,0 +1,6 @@
+cat report.html > results.html
+valgrind --tool=cachegrind $WORKSPACE/run_tests.sh | awk 'BEGIN{print "<table BORDER=0 CELLSPACING=2 CELLPADDING=2> <caption> <b> <br> Tests results: <br> </b>  </caption>"} {print "<tr>";for(i=1;i<=NR;i++)print "<td>" $0"</td>";print "</tr>"} END{print "</table>"}' >> results.html
+echo "<br> <b> VALGRIND REPORT: </b>" >> results.html 
+valgrind --tool=cachegrind $WORKSPACE/run_tests.sh 2>&1 >/dev/null | awk 'BEGIN{print "<table BORDER=0 CELLSPACING=2 CELLPADDING=2> <caption> <b> <br> Cachegrind tool: <br> </b> </caption>"} {print "<tr>";for(i=1;i<=NR;i++)print "<td>" $0"</td>";print "</tr>"} END{print "</table>"}' >> results.html
+valgrind --tool=callgrind $WORKSPACE/run_tests.sh 2>&1 >/dev/null | awk 'BEGIN{print "<table BORDER=0 CELLSPACING=2 CELLPADDING=2> <caption> <b> <br> Callgrind tool: <br> </b> </caption>"} {print "<tr>";for(i=1;i<=NR;i++)print "<td>" $0"</td>";print "</tr>"} END{print "</table>"}' >> results.html
+valgrind --tool=massif $WORKSPACE/run_tests.sh 2>&1 >/dev/null | awk 'BEGIN{print "<table BORDER=0 CELLSPACING=2 CELLPADDING=2> <caption> <b> <br> Massif tool: <br> </b> </caption>"} {print "<tr>";for(i=1;i<=NR;i++)print "<td>" $0"</td>";print "</tr>"} END{print "</table>"}' >> results.html
