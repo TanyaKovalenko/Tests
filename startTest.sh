@@ -1,0 +1,7 @@
+touch $WORKSPACE/results.html
+cat $WORKSPACE/report.html > $WORKSPACE/results.html 
+echo "<br> <b> VALGRIND REPORT: </b>" >> $WORKSPACE/results.html
+./run_tests.sh | awk 'BEGIN{print "<table BORDER=0 CELLSPACING=2 CELLPADDING=2> <caption> <b> <br> Tests results: <br> </b> </caption>"} {print "<tr>";print "<td>" $0"</td>";print "</tr>"} END{print "</table>"}' >> $WORKSPACE/results.html
+valgrind --tool=cachegrind $WORKSPACE/run_tests.sh 2>&1 >/dev/null | awk 'BEGIN{print "<table BORDER=0 CELLSPACING=2 CELLPADDING=2> <caption> <b> <br> Cachegrind tool: <br> </b> </caption>"} {print "<tr>";print "<td>" $0"</td>";print "</tr>"} END{print "</table>"}' >> $WORKSPACE/results.html
+valgrind --tool=memcheck $WORKSPACE/run_tests.sh 2>&1 >/dev/null | awk 'BEGIN{print "<table BORDER=0 CELLSPACING=2 CELLPADDING=2> <caption> <b> <br> Memcheck tool: <br> </b> </caption>"} {print "<tr>";print "<td>" $0"</td>";print "</tr>"} END{print "</table>"}' >> $WORKSPACE/results.html
+valgrind --tool=callgrind $WORKSPACE/run_tests.sh 2>&1 >/dev/null | awk 'BEGIN{print "<table BORDER=0 CELLSPACING=2 CELLPADDING=2> <caption> <b> <br> Callgrind tool: <br> </b> </caption>"} {print "<tr>";print "<td>" $0"</td>";print "</tr>"} END{print "</table>"}' >> $WORKSPACE/results.html
