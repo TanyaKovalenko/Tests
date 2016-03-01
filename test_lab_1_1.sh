@@ -41,5 +41,3 @@ do
 	num_of_output_string=$[$num_of_output_string+1]
 done
 echo "Program works correctly."
-
-
