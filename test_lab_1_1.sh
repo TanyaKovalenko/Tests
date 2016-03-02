@@ -16,7 +16,7 @@ done
 index_of_string_in_array=0
 declare -a output_array_of_strings
 TEMP_FILE_WITH_OUTPUT_STRINGS=`mktemp outXXXXXXXXX`
-echo "${input_array[@]}" | make run-martynov.alexey/1 ARGS="1 ascending" > $TEMP_FILE_WITH_OUTPUT_STRINGS 
+echo "${input_array[@]}" | make run-martynov.alexey/1 VALGRIND="--leak-check=full --track-origins=yes --xml=yes --xml-file='memcheckRes_1_1.xml'" ARGS="1 ascending" > $TEMP_FILE_WITH_OUTPUT_STRINGS 
 while read line ; do
 	output_array_of_strings[$index_of_string_in_array]=$line
 	index_of_string_in_array=$[$index_of_string_in_array+1]
