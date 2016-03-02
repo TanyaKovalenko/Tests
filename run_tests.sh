@@ -1,6 +1,6 @@
 git config user.name "Builder"
 git config user.email "builder@localhost"
-git merge --no-commit origin1/c++-2016
+git merge --no-commit origin1/buggy-implementation
 echo "
 LAB 1.1
 "
