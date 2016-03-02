@@ -23,7 +23,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="stack">
     <tr>
         <td><xsl:value-of select="../kind"/></td>
-        <td><xsl:value-of select="../what"/></td>
+        <td><xsl:value-of select="../xwhat"/></td>
         <td><xsl:value-of select="frame/file"/></td>
         <td><xsl:value-of select="frame/line"/></td>
     </tr>
