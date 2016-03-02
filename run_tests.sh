@@ -22,6 +22,10 @@ LAB 1.3.3:
 "
 "$WORKSPACE"/test_lab_1_3_3.sh
 echo "
+LAB 1.3.4:
+"
+"$WORKSPACE"/test_lab_1_3_4.sh
+echo "
 LAB 1.4:
 "
 "$WORKSPACE"/test_lab_1_4.sh
