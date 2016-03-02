@@ -19,7 +19,7 @@ input_array[$MAX_NUM_OF_EL_IN_ARRAY]=5
 TEMP_FILE_WITH_OUTPUT_STRINGS=`mktemp outXXXXXXXXX`
 declare -a output_array_of_strings
 index_of_string_in_array=0
-echo "${input_array[@]}" | make run-1 ARGS="3" > $TEMP_FILE_WITH_OUTPUT_STRINGS 
+echo "${input_array[@]}" | make run-martynov.alexey/1 ARGS="3" > $TEMP_FILE_WITH_OUTPUT_STRINGS 
 if [[ $? -eq 0 ]]
 then
 	echo "There is a error somewhere in your code."

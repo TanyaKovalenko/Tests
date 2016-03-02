@@ -20,7 +20,7 @@ input_array[$MAX_NUM_OF_EL_IN_ARRAY]=0
 TEMP_FILE_WITH_OUTPUT_STRINGS=`mktemp outXXXXXXXXX`
 declare -a output_array_of_strings
 index_of_string_in_array=0
-echo "${input_array[@]}" | make run-1 ARGS="3" > $TEMP_FILE_WITH_OUTPUT_STRINGS 
+echo "${input_array[@]}" | make run-martynov.alexey/1 ARGS="3" > $TEMP_FILE_WITH_OUTPUT_STRINGS 
 while read line ; do
 	output_array_of_strings[$index_of_string_in_array]=$line
 	index_of_string_in_array=$[$index_of_string_in_array+1]

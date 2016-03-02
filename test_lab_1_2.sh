@@ -21,7 +21,7 @@ TEMP_FILE_WITH_OUTPUT_STRING="`mktemp outXXXXXXXXX`"
 
 declare -a output_array_of_strings
 index_of_string_in_array=0
-make run-1 ARGS="2 $TEMP_FILE_INPUT" > "$TEMP_FILE_WITH_OUTPUT_STRING"
+make run-martynov.alexey/1 ARGS="2 $TEMP_FILE_INPUT" > "$TEMP_FILE_WITH_OUTPUT_STRING"
 
 diff -u $TEMP_FILE_WITH_OUTPUT_STRING $TEMP_FILE_INPUT
 	if [ $? -ne 0 ]
