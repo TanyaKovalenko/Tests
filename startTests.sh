@@ -2,6 +2,7 @@
 cp report.html results.html 
 echo "<br> <b> VALGRIND REPORT: </b>" >> results.html
 ./run_tests.sh > tests.out 2>&1
+cat tests.out
 sed -e 's/&/&amp/g' tests.out > tests.out
 sed -e 's/"/&quot/g' tests.out > tests.out
 sed -e "s/'/&apos/g" tests.out > tests.out
