@@ -1,5 +1,5 @@
-cp $WORKSPACE/report.html $WORKSPACE/results.html 
-echo "<br> <b> VALGRIND REPORT: </b>" >> $WORKSPACE/results.html
+cp report.html results.html 
+echo "<br> <b> VALGRIND REPORT: </b>" >> results.html
 ./run_tests.sh > tests.out 2>&1
 sed -e 's/&/&amp/g' tests.out > tests.out
 sed -e 's/"/&quot/g' tests.out > tests.out
@@ -12,5 +12,5 @@ do
 	htmlFile=memcheckRes$arg.html
     xmlFile=memcheckRes$arg.xml
 	xsltproc -o $htmlFile style.xsl $xmlFile
-    cat $htmlFile >> $WORKSPACE/results.html
+    cat $htmlFile >> results.html
 done
