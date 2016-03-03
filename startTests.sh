@@ -1,3 +1,4 @@
+#!/bin/bash
 cp report.html results.html 
 echo "<br> <b> VALGRIND REPORT: </b>" >> results.html
 ./run_tests.sh > tests.out 2>&1
