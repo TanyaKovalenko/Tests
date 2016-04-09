@@ -22,5 +22,5 @@ do
             	fi
         done
     done
-    curl -H "PRIVATE-TOKEN: SfkWoPZmXuzEAEa-XW-4" -F "web=@results.html;type=text/html" https://gitlab.com/api/v3/projects/939427/merge_requests/$ID/notes
+    curl -H "PRIVATE-TOKEN: SfkWoPZmXuzEAEa-XW-4" -F body=@results.html -X POST https://gitlab.com/api/v3/projects/939427/merge_requests/$ID/notes
 done
