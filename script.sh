@@ -18,8 +18,8 @@ do
 		if [ $RES -ne "0" ]
             	then
                 	./startTests$t.sh
-            	fi
-        done
+    			curl -H "PRIVATE-TOKEN: SfkWoPZmXuzEAEa-XW-4" -F body="<results$t.html" -X POST https://gitlab.com/api/v3/projects/939427/merge_requests/$ID/notes
+        	fi
+	done
     done
-    curl -H "PRIVATE-TOKEN: SfkWoPZmXuzEAEa-XW-4" -F body="<results$t.html" -X POST https://gitlab.com/api/v3/projects/939427/merge_requests/$ID/notes
 done
