@@ -22,7 +22,7 @@ do
         	fi
 
 	done
-	for l in $( input_array)
+	for l in "${input_array[@]}"
                 do
                         cppcheck path_file --xml 2> cppcheck-result$l.xml
                         ./startTests$l.sh
