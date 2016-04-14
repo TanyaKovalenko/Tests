@@ -25,7 +25,7 @@ do
 	for l in "${input_array[@]}"
                 do
 			lab_file=$(cat path_file)
-                        cppcheck path_file --xml 2> cppcheck-result$l.xml
+                        cppcheck $lab_file --xml 2> cppcheck-result$l.xml
                         ./startTests$l.sh
                         htmlFile=cppcheck-result$l.html
                         xmlFile=cppcheck-result$l.xml
