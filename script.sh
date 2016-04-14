@@ -12,7 +12,7 @@ do
     do
     	numOfChange=$(($numOfChange-1))
         cat changes.json | jq ".changes[$numOfChange].new_path" > path_file
-	indexOfLab = 0
+	indexOfLab=0
         for t in `seq 1 8`
         do
 		RES=$(grep -c /$t/ path_file)     
@@ -22,7 +22,7 @@ do
         	fi
 
 	done
-	for l in input_array
+	for l in $( input_array)
                 do
                         cppcheck path_file --xml 2> cppcheck-result$l.xml
                         ./startTests$l.sh
