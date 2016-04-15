@@ -26,7 +26,7 @@ do
                 do
 			echo $l
 			cat path_file
-			lab_file=$(cat path_file)
+			lab_file=$WORKSPACE$(cat path_file)
 			echo $lab_file
                         cppcheck $lab_file --xml 2> cppcheck-result$l.xml
                         ./startTests$l.sh
