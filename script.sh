@@ -24,6 +24,7 @@ do
 	done
 	for l in "${input_array[@]}"
                 do
+			cat $l
 			lab_file=$(cat path_file)
                         cppcheck $lab_file --xml 2> cppcheck-result$l.xml
                         ./startTests$l.sh
