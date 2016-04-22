@@ -24,7 +24,7 @@ do
 	done
 	for l in "${input_array[@]}"
                 do
-			path_in quotes=$(cat path_file)
+			path_in_quotes=$(cat path_file)
 			path=$(echo $path_in_quotes | tr -d \")
 			lab_file=$WORKSPACE/$path
 			echo $lab_file
