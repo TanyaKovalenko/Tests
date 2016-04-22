@@ -17,6 +17,7 @@ for arg in _1_1 _1_2 _1_3_1 _1_3_2 _1_3_3 _1_3_4 _1_4
 do
 	htmlFile=memcheckRes$arg.html
     	xmlFile=memcheckRes$arg.xml
+	cat memcheckRes$arg.xml
 	xsltproc -o $htmlFile style.xsl $xmlFile
 	echo "<br> <b> LAB$arg: </b> <br>" >> results1.html
     	cat $htmlFile >> results1.html

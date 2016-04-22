@@ -22,22 +22,18 @@ do
         	fi
 
 	done
-	ls
 	for l in "${input_array[@]}"
                 do			
                         ./startTests$l.sh
 						path_in_quotes=$(cat path_file)
 						path=$(echo $path_in_quotes | tr -d \")
 						lab_file=$WORKSPACE/$path
-						cat $lab_file
                         cppcheck $lab_file --xml 2> cppcheck-result$l.xml
 						htmlreport/cppcheck-htmlreport --file=cppcheck-result$l.xml --report-dir=. --source-dir=.
                         #htmlFile=cppcheck-result$l.html
                         #xmlFile=cppcheck-result$l.xml
                         #cat cppcheck-result$l.xml
-						#xsltproc -o $htmlFile cppcheckStyle.xsl $xmlFile
-						ls
-						echo cppcheck-result$l.html 
+						#xsltproc -o $htmlFile cppcheckStyle.xsl $xmlFile 
                         echo "<br> <b> LAB$l: </b> <br>" >> results1.html
                         cat $htmlFile >> results1.html
                         curl -H "PRIVATE-TOKEN: SfkWoPZmXuzEAEa-XW-4" -F body="<results$l.html" -X POST https://gitlab.com/api/v3/projects/939427/merge_requests/$ID/notes
