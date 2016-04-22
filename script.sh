@@ -25,9 +25,8 @@ do
 	for l in "${input_array[@]}"
                 do
 			path_in quotes=$(cat path_file)
-			path=$(echo $path_in quotes | tr -d \")
+			path=$(echo $path_in_quotes | tr -d \")
 			lab_file=$WORKSPACE/$path
-			cat lab_file
 			echo $lab_file
                         cppcheck $lab_file --xml 2> cppcheck-result$l.xml
                         ./startTests$l.sh
