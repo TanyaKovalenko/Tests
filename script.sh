@@ -22,6 +22,7 @@ do
         	fi
 
 	done
+	ls
 	for l in "${input_array[@]}"
                 do
 			path_in_quotes=$(cat path_file)
