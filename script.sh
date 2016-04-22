@@ -31,12 +31,15 @@ do
 						lab_file=$WORKSPACE/$path
 						cat $lab_file
                         cppcheck $lab_file --xml 2> cppcheck-result$l.xml
-                        htmlFile=cppcheck-result$l.html
-                        xmlFile=cppcheck-result$l.xml
-                        cat cppcheck-result$l.xml
-			#xsltproc -o $htmlFile style.xsl $xmlFile
-                        #echo "<br> <b> LAB$l: </b> <br>" >> results1.html
-                        #cat $htmlFile >> results1.html
+						htmlreport/cppcheck-htmlreport --file=cppcheck-result$l.xml --report-dir=. --source-dir=.
+                        #htmlFile=cppcheck-result$l.html
+                        #xmlFile=cppcheck-result$l.xml
+                        #cat cppcheck-result$l.xml
+						#xsltproc -o $htmlFile cppcheckStyle.xsl $xmlFile
+						ls
+						echo cppcheck-result$l.html 
+                        echo "<br> <b> LAB$l: </b> <br>" >> results1.html
+                        cat $htmlFile >> results1.html
                         curl -H "PRIVATE-TOKEN: SfkWoPZmXuzEAEa-XW-4" -F body="<results$l.html" -X POST https://gitlab.com/api/v3/projects/939427/merge_requests/$ID/notes
 	done
     done
