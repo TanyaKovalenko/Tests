@@ -29,7 +29,7 @@ do
 						path_in_quotes=$(cat path_file)
 						path=$(echo $path_in_quotes | tr -d \")
 						lab_file=$WORKSPACE/$path
-						echo $lab_file
+						cat $lab_file
                         cppcheck $lab_file --xml 2> cppcheck-result$l.xml
                         htmlFile=cppcheck-result$l.html
                         xmlFile=cppcheck-result$l.xml
