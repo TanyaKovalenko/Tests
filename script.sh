@@ -35,7 +35,7 @@ do
                         htmlFile=cppcheck-result$l.html
                         xmlFile=cppcheck-result$l.xml
                         cat cppcheck-result$l.xml
-						xsltproc -o $htmlFile cppcheckStyle.xsl $xmlFile
+						xsltproc -o $htmlFile cppcheck.xsl $xmlFile
 						cat $htmlFile 
                         echo "<br> <b> LAB$l: </b> <br>" >> results1.html
                         cat $htmlFile >> results1.html
