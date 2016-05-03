@@ -29,6 +29,7 @@ do
 							./startTests$l.sh
 							path_in_quotes=$(cat path_file)
 							path=$(echo $path_in_quotes | tr -d \")
+							echo $path
 							lab_file=$WORKSPACE/$path
 							cppcheck $lab_file --xml 2> cppcheck-result$l.xml						
 							htmlFile=cppcheck-result$l.html
