@@ -15,6 +15,7 @@ do
 		do
 			numOfChange=$(($numOfChange-1))
 			cat changes.json | jq ".changes[$numOfChange].new_path" > path_file
+			echo $path_file
 			indexOfLab=0
 			for t in `seq 1 8`
 				do
@@ -28,9 +29,11 @@ do
 					do			
 							./startTests$l.sh
 							path_in_quotes=$(cat path_file)
-							path=$(echo $path_in_quotes | tr -d \")
-							echo $path
+							path=$(echo $path_in_quotes | tr -d \")							
 							lab_file=$WORKSPACE/$path
+							echo $lab_file | sed -r "s/\/$l\/.+//"
+							lab_file=$(echo $lab_file/$l/)
+							echo $lab_file
 							cppcheck $lab_file --xml 2> cppcheck-result$l.xml						
 							htmlFile=cppcheck-result$l.html
 							xmlFile=cppcheck-result$l.xml
