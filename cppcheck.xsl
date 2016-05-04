@@ -12,21 +12,6 @@ xmlns:str="http://exslt.org/strings" extension-element-prefixes="str">
 <head><title>cppcheck Report</title>
 </head>
 <body>
-<div id="main">
-    <div id="links">
-      <!-- **** INSERT LINKS HERE **** -->
-      <!--a href="#">another link</a> | <a href="#">another link</a> | <a href="#">another link</a> | <a href="#">another link</a-->
-    @@@_PUBLISH_DATE_@@@
-    </div>
-    <div id="logo"><h1>MAF Quality Assurance</h1></div>
-    <div id="content">
-      <div id="menu">
-        <ul>
-          <li><a href="../html/index.html">Introduction</a></li>
-        </ul>
-      </div>
-
-
 <div id="contentTable" align="center">
  <table id="listing">
   <thead>
@@ -65,8 +50,6 @@ xmlns:str="http://exslt.org/strings" extension-element-prefixes="str">
 	</xsl:for-each>
   </tbody>
  </table>
-</div>
-</div>
 </div>
 </body>
 </html>
