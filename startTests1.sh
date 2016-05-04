@@ -1,7 +1,8 @@
 #!/bin/bash
 #cp report.html results1.html
 echo "<br> <b> LAB1 REPORT: 
-</b> <br>" >> results1.html
+
+</b> <br>" > results1.html
 ./run_tests.sh > tests.out 2>&1
 sed -e 's/&/&amp/g' tests.out > tests1.out
 cat tests1.out > tests.out
