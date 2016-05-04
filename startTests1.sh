@@ -1,5 +1,5 @@
 #!/bin/bash
-#cp report.html results1.html
+cp report.html results1.html
 echo "<br> <b> LAB1 REPORT: 
 
 </b> <br>" > results1.html
