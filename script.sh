@@ -29,12 +29,12 @@ do
 							echo $lab_file | sed -r "s/\/$l\/.+//" > path_to_lab_folder
 							lab_file=$(cat path_to_lab_folder)
 							lab_file=$(echo $lab_file/$l/)
-							echo $lab_file
 							cppcheck $lab_file --xml 2> cppcheck-result$l.xml						
 							htmlFile=cppcheck-result$l.html
 							xmlFile=cppcheck-result$l.xml
 							xsltproc -o $htmlFile cppcheck.xsl $xmlFile
-							echo "<br> <b> LAB$l: </b> <br>" >> results1.html
+							echo "<br> <b> CPPCHECK REPORT: 
+</b>" >> results1.html							
 							cat $htmlFile >> results1.html
 							curl -H "PRIVATE-TOKEN: SfkWoPZmXuzEAEa-XW-4" -F body="<results$l.html" -X POST https://gitlab.com/api/v3/projects/939427/merge_requests/$ID/notes
 		done
