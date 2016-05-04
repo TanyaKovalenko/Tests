@@ -4,8 +4,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:strip-space elements="*"/>
 
 <xsl:template match="/valgrindoutput">
-    <table border="1">
-        <caption>Error summary</caption>
+    <table border="1">        
         <thead>
             <tr>
                 <th>Kind</th>

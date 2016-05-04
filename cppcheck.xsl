@@ -9,8 +9,6 @@ xmlns:str="http://exslt.org/strings" extension-element-prefixes="str">
 
 <!-- **** colour scheme stylesheet **** -->
 <link rel="stylesheet" type="text/css" href="../html/Styles/colour.css" />
-<head><title>cppcheck Report</title>
-</head>
 <body>
 <div id="contentTable" align="center">
  <table id="listing">
