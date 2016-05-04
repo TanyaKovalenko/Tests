@@ -3,7 +3,6 @@ cleanup() {
   rm -f "$TEMP_FILE_WITH_OUTPUT_STRINGS"
 }
 trap cleanup EXIT
-echo "Run test for lab 1.3 ... "
 echo "Test case in which input array ends not with 0"
 RANGE=20
 MAX_NUM_OF_EL_IN_ARRAY=$RANDOM

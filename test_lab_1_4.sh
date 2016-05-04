@@ -3,7 +3,6 @@ cleanup() {
   rm -f "$TEMP_FILE_WITH_OUTPUT_STRINGS" "$TEMP_FILE_WITH_SORTED_ARRAY" "$TEMP_FILE_WITH_OUTPUT_ARRAY"
 }
 trap cleanup EXIT
-echo "Run test for lab 1.4 ... "
 MAX_NUM_OF_EL_IN_ARRAY=5
 index_of_string_in_array=0
 declare -a output_array_of_strings

@@ -3,7 +3,6 @@ cleanup() {
   rm -f "$TEMP_FILE_WITH_OUTPUT_STRING" "$TEMP_FILE_INPUT"
 }
 trap cleanup EXIT
-echo "Run test for lab 1.2 ... "
 RANGE=20
 MAX_NUM_OF_EL_IN_ARRAY=$RANDOM
 let "MAX_NUM_OF_EL_IN_ARRAY %= $RANGE"
