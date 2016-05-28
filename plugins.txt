@@ -1,0 +1,6 @@
+plain-credentials 1.1
+git-client 1.18.0 
+scm-api 0.2
+git 2.4.0
+github-api 1.69
+github 1.14.0
