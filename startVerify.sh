@@ -22,7 +22,7 @@ do
 			done
 		for l in "${input_array[@]}"
 					do			
-							./startTests$l.sh
+							./startVerifyLab$l.sh
 							path_in_quotes=$(cat path_file)
 							path=$(echo $path_in_quotes | tr -d \")							
 							lab_file=$WORKSPACE/$path
